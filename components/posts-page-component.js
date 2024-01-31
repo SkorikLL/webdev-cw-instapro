@@ -11,6 +11,7 @@ export function renderPostsPageComponent({ appEl }) {
    * можно использовать https://date-fns.org/v2.29.3/docs/formatDistanceToNow
    */
   const appHtml = `
+
               <div class="page-container">
                 <div class="header-container"></div>
                 <ul class="posts">
