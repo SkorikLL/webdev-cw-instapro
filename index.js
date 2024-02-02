@@ -112,6 +112,9 @@ const renderApp = () => {
       onAddPostClick({ description, imageUrl }) {
         // TODO: реализовать добавление поста в API
         console.log("Добавляю пост...", { description, imageUrl });
+
+        ("!!!");
+
         goToPage(POSTS_PAGE);
       },
     });
@@ -126,8 +129,15 @@ const renderApp = () => {
   if (page === USER_POSTS_PAGE) {
     // TODO: реализовать страницу фотографию пользвателя
     appEl.innerHTML = "Здесь будет страница фотографий пользователя";
+    ("!!!");
     return;
   }
 };
 
 goToPage(POSTS_PAGE);
+
+// ADD_POSTS_PAGE,
+// AUTH_PAGE,
+// LOADING_PAGE,
+// POSTS_PAGE,
+// USER_POSTS_PAGE,
