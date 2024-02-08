@@ -2,7 +2,8 @@ import { LIKE_POSTS_PAGE, USER_POSTS_PAGE } from "../routes.js";
 import { renderHeaderComponent } from "./header-component.js";
 import { posts, goToPage, getToken } from "../index.js";
 import { addLikeApi, dislikeLikeApi } from "../api.js";
-//import { ru } from "date-fns/locale";
+import { formatDistanceToNow } from "date-fns";
+import { ru } from "date-fns/locale";
 
 export function renderPostsPageComponent({ appEl }) {
   // TODO: реализовать рендер постов из api
@@ -20,9 +21,6 @@ export function renderPostsPageComponent({ appEl }) {
         ? 0
         : post.likes[0].name;
 
-    //const createdTimeToNow = formatDistanceToNow(new Date(post.createdAt), {
-    //locale: ru,
-    //});
     return `
 
               <div class="page-container">
@@ -58,7 +56,9 @@ export function renderPostsPageComponent({ appEl }) {
                       ${post.description}
                     </p>
                     <p class="post-date">
-                      
+${formatDistanceToNow(new Date(post.createdAt), {
+  locale: ru,
+})} назад
                     </p>
                   </li>
                 </ul>

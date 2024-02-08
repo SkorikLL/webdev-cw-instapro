@@ -1,13 +1,14 @@
 // Замени на свой, чтобы получить независимый от других набор данных.
 
-import { getToken } from "../index.js";
+import { getToken } from "./index.js";
 
 // "боевая" версия инстапро лежит в ключе prod
+// моя версия leonid-skorik
 const personalKey = "leonid-skorik";
 const baseHost = "https://webdev-hw-api.vercel.app";
 const postsHost = `${baseHost}/api/v1/${personalKey}/instapro`;
 
-export function getPosts({ token }) {
+export function getPosts({ token }) {  
   return fetch(postsHost, {
     method: "GET",
     headers: {

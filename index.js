@@ -29,7 +29,6 @@ export const changeLocalPosts = (newPosts) => {
   posts = newPosts;
 };
 
-
 export const getToken = () => {
   const token = user ? `Bearer ${user.token}` : undefined;
   return token;
@@ -85,8 +84,6 @@ export const goToPage = (newPage, data) => {
     }
 
     if (newPage === LIKE_POSTS_PAGE) {
-      renderApp();
-
       return getPosts({ token: getToken() })
         .then((newPosts) => {
           page = POSTS_PAGE;
