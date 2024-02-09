@@ -80,6 +80,7 @@ export function renderAddPostPageComponent({ appEl, onAddPostClick }) {
             .replaceAll(">", "&gt;"),
           imageUrl: imageUrl,
         });
+        goToPage(POSTS_PAGE);
       }
     });
   };
